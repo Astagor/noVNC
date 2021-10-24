@@ -11,10 +11,10 @@
 #   "vnc": "localhost:5902"
 #}
 #}
-snapctl get services | jq -c '.[]' | while read service; do # for each service the user sepcified..
+snapctl get services | /snap/novnc/current/jq -c '.[]' | while read service; do # for each service the user sepcified..
     # get the important data for the service (listen port, VNC host:port)
-    listen_port="$(echo $service | jq --raw-output '.listen')"
-    vnc_host_port="$(echo $service | jq --raw-output '.vnc')" # --raw-output removes any quotation marks from the output
+    listen_port="$(echo $service | /snap/novnc/current/jq --raw-output '.listen')"
+    vnc_host_port="$(echo $service | /snap/novnc/current/jq --raw-output '.vnc')" # --raw-output removes any quotation marks from the output
     
     # check whether those values are valid
     expr "$listen_port" : '^[0-9]\+$' > /dev/null
