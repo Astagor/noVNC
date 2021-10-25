@@ -19,7 +19,6 @@
     "vendor/pako"
   ],
   "scripts": {
-    "medvc-deploy": "mkdir -p /var/www/html/novnc && cp *.php /var/www/html/novnc/ && cp -r medvc_extra_services /var/www/html/novnc/ && cp -r img /var/www/html/novnc/ && cp novnc_proxy /var/www/html/novnc/ && cp -r app /var/www/html/novnc/ && cp -r core /var/www/html/novnc/ && cp -r vendor /var/www/html/novnc/",
     "lint": "eslint app core po/po2js po/xgettext-html tests utils",
     "test": "karma start karma.conf.js",
     "prepublish": "node ./utils/use_require.js --clean"

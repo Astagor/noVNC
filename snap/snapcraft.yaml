@@ -34,6 +34,7 @@ parts:
         stage:
             - svc_wrapper.sh
             - jq
+            - medVC_deploy.sh
         stage-packages:
             - bash
 

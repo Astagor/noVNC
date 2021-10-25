@@ -3,11 +3,11 @@ git clone https://github.com/Astagor/noVNC.git
 cd noVNC
 git pull
 chmod a+x /var/www/noVNC/snap/hooks/configure
+chmod a+x /var/www/noVNC/snap/hooks/medVC_deploy.sh
 chmod a+x /var/www/noVNC/snap/local/jq
 snapcraft snap
-snap install --dangerous novnc_666.3.0_amd64.snap
-cd /snap/novnc/current
-node medvc-deploy
+snap install --dangerous novnc_1.3.0+medVC_amd64.snap
+/snap/novnc/current/medVC_deploy.sh
 snap set novnc services.n6081.listen=6081 services.n6081.vnc=127.0.0.1:5922 services.n6081.cert=/etc/letsencrypt/live/novnc.conf.medvc.eu/cert.pem
 snap set novnc services.n6082.listen=6082 services.n6082.vnc=127.0.0.1:5923 services.n6082.cert=/etc/letsencrypt/live/novnc2.conf.medvc.eu/cert.pem
 snap set novnc services.n6083.listen=6083 services.n6083.vnc=127.0.0.1:5924 services.n6083.cert=/etc/letsencrypt/live/novnc3.conf.medvc.eu/cert.pem
