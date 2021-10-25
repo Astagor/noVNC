@@ -3,7 +3,7 @@ git clone https://github.com/Astagor/noVNC.git
 cd noVNC
 git pull
 chmod a+x /var/www/noVNC/snap/hooks/configure
-chmod a+x /var/www/noVNC/snap/hooks/medVC_deploy.sh
+chmod a+x /var/www/noVNC/snap/local/medVC_deploy.sh
 chmod a+x /var/www/noVNC/snap/local/jq
 snapcraft snap
 snap install --dangerous novnc_1.3.0+medVC_amd64.snap
