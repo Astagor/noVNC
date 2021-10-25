@@ -33,9 +33,9 @@ parts:
         plugin: dump
         stage:
             - svc_wrapper.sh
+            - jq
         stage-packages:
             - bash
-            - jq
 
     websockify:
         source: https://github.com/novnc/websockify/archive/v0.9.0.tar.gz
