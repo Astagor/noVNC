@@ -1,4 +1,4 @@
-name: novnc_medvc
+name: novnc
 base: core18 # the base snap is the execution environment for this snap
 version: '@VERSION@'
 summary: Open Source VNC client using HTML5 (WebSockets, Canvas)
@@ -33,9 +33,9 @@ parts:
         plugin: dump
         stage:
             - svc_wrapper.sh
-            - jq
         stage-packages:
             - bash
+            - jq
 
     websockify:
         source: https://github.com/novnc/websockify/archive/v0.9.0.tar.gz

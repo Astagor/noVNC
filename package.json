@@ -1,6 +1,6 @@
 {
   "name": "@novnc/novnc",
-  "version": "1.3.0",
+  "version": "666.3.0",
   "description": "An HTML5 VNC client",
   "browser": "lib/rfb",
   "directories": {
@@ -19,13 +19,14 @@
     "vendor/pako"
   ],
   "scripts": {
+    "medvc-deploy": "mkdir -p /var/www/html/novnc && cp *.php /var/www/html/novnc/ && cp -r medvc_extra_services /var/www/html/novnc/ && cp -r img /var/www/html/novnc/ && cp novnc_proxy /var/www/html/novnc/ && cp -r app /var/www/html/novnc/ && cp -r core /var/www/html/novnc/ && cp -r vendor /var/www/html/novnc/",
     "lint": "eslint app core po/po2js po/xgettext-html tests utils",
     "test": "karma start karma.conf.js",
     "prepublish": "node ./utils/use_require.js --clean"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/novnc/noVNC.git"
+    "url": "git+https://github.com/Astagor/noVNC.git"
   },
   "author": "Joel Martin <github@martintribe.org> (https://github.com/kanaka)",
   "contributors": [
@@ -34,9 +35,9 @@
   ],
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/novnc/noVNC/issues"
+    "url": "https://github.com/Astagor/noVNC/issues"
   },
-  "homepage": "https://github.com/novnc/noVNC",
+  "homepage": "https://github.com/Astagor/noVNC",
   "devDependencies": {
     "@babel/core": "*",
     "@babel/plugin-syntax-dynamic-import": "*",
