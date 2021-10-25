@@ -5,7 +5,7 @@ After=network.target
 [Service]
 ExecStart=/var/www/noVNC/utils/novnc_proxy --listen 6081 --vnc 127.0.0.1:5922 --cert /etc/letsencrypt/live/novnc.conf.medvc.eu/cert.pem
 Restart=always
-Environment=PATH=/usr/bin:/usr/local/bin
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 Environment=NODE_ENV=production
 Environment=DEBUG="*ERROR*,*WARN*,*INFO*"
 #Environment=DEBUG="*"
