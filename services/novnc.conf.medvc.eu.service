@@ -1,0 +1,20 @@
+[Unit]
+Description=novnc.conf.medvc.eu
+After=network.target
+
+[Service]
+ExecStart=/var/www/noVNC/utils/novnc_proxy --listen 6081 --vnc 127.0.0.1:5922 --cert /etc/letsencrypt/live/novnc.conf.medvc.eu/cert.pem
+Restart=always
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+Environment=DEBUG="*ERROR*,*WARN*,*INFO*"
+#Environment=DEBUG="*"
+User=www-data
+Group=www-data
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/var/www/noVNC/utils/
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target

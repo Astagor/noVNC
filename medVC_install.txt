@@ -3,7 +3,7 @@ git clone https://github.com/Astagor/noVNC.git
 cd noVNC
 git pull
 /var/www/noVNC/medVC_deploy_no_snap.sh
-
+copy needed services from services/ dir
 
 
 
