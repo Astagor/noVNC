@@ -33,6 +33,7 @@ parts:
         plugin: dump
         stage:
             - svc_wrapper.sh
+            - jq
         stage-packages:
             - bash
             - jq
