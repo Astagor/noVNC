@@ -3,8 +3,19 @@ git clone https://github.com/Astagor/noVNC.git
 cd noVNC
 git pull
 /var/www/noVNC/medVC_deploy_no_snap.sh
-copy needed services from services/ dir
-
+cp services/novnc.conf.medvc.eu.service /etc/systemd/system/novnc.conf.medvc.eu.service
+cp services/novnc2.conf.medvc.eu.service /etc/systemd/system/novnc2.conf.medvc.eu.service
+cp services/novnc3.conf.medvc.eu.service /etc/systemd/system/novnc3.conf.medvc.eu.service
+cp services/novnc.speakers.tnc21.geant.org.service /etc/systemd/system/novnc.speakers.tnc21.geant.org.service
+systemctl daemon-reload
+systemctl enable novnc.conf.medvc.eu.service
+systemctl enable novnc2.conf.medvc.eu.service
+systemctl enable novnc3.conf.medvc.eu.service
+systemctl enable novnc.speakers.tnc21.geant.org.service
+systemctl start novnc.conf.medvc.eu.service
+systemctl start novnc2.conf.medvc.eu.service
+systemctl start novnc3.conf.medvc.eu.service
+systemctl start novnc.speakers.tnc21.geant.org.service
 
 
 
