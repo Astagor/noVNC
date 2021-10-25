@@ -1,15 +1,17 @@
-01. cd /var/www
-02. git clone https://github.com/Astagor/noVNC.git
-03. cd noVNC
-04. git pull
-05. snapcraft snap
-06. snap install --dangerous novnc_666.3.0_amd64.snap
-07. cd /snap/novnc/current
-08. node medvc-deploy
-09. snap set novnc services.n6081.listen=6081 services.n6081.vnc=127.0.0.1:5922 services.n6081.cert=/etc/letsencrypt/live/novnc.conf.medvc.eu/cert.pem
-10. snap set novnc services.n6082.listen=6082 services.n6082.vnc=127.0.0.1:5923 services.n6082.cert=/etc/letsencrypt/live/novnc2.conf.medvc.eu/cert.pem
-11. snap set novnc services.n6083.listen=6083 services.n6083.vnc=127.0.0.1:5924 services.n6083.cert=/etc/letsencrypt/live/novnc3.conf.medvc.eu/cert.pem
-12. snap set novnc services.n6084.listen=6084 services.n6084.vnc=127.0.0.1:5925 services.n6084.cert=/etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/cert.pem
+cd /var/www
+git clone https://github.com/Astagor/noVNC.git
+cd noVNC
+git pull
+chmod a+x /var/www/noVNC/snap/hooks/configure
+chmod a+x /var/www/noVNC/snap/local/jq
+snapcraft snap
+snap install --dangerous novnc_666.3.0_amd64.snap
+cd /snap/novnc/current
+node medvc-deploy
+snap set novnc services.n6081.listen=6081 services.n6081.vnc=127.0.0.1:5922 services.n6081.cert=/etc/letsencrypt/live/novnc.conf.medvc.eu/cert.pem
+snap set novnc services.n6082.listen=6082 services.n6082.vnc=127.0.0.1:5923 services.n6082.cert=/etc/letsencrypt/live/novnc2.conf.medvc.eu/cert.pem
+snap set novnc services.n6083.listen=6083 services.n6083.vnc=127.0.0.1:5924 services.n6083.cert=/etc/letsencrypt/live/novnc3.conf.medvc.eu/cert.pem
+snap set novnc services.n6084.listen=6084 services.n6084.vnc=127.0.0.1:5925 services.n6084.cert=/etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/cert.pem
 
 
 pierwsze połączenie
