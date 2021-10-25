@@ -1,0 +1,17 @@
+[Unit]
+Description=novnc3.conf.medvc.eu
+After=network.target
+
+[Service]
+ExecStart=/var/www/noVNC/utils/novnc_proxy --listen 6083 --vnc 127.0.0.1:5924 --cert /etc/letsencrypt/live/novnc3.conf.medvc.eu/cert.pem
+Restart=always
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+User=www-data
+Group=www-data
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/var/www/noVNC/utils/
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target
