@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /snap/novnc/current
+cd /var/www/noVNC
 mkdir -p /var/www/html/novnc
 cp *.php /var/www/html/novnc/
 cp -r medvc_extra_services /var/www/html/novnc/
