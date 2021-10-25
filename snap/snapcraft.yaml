@@ -19,6 +19,7 @@ parts:
             utils/novnc_proxy: /
         stage:
             - ./*.php
+            - vnc.html
             - app
             - core/**/*.js
             - vendor/**/*.js
