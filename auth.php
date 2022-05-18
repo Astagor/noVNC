@@ -1,4 +1,20 @@
 <?php
+$maxlifetime = 4 * 24 * 60 * 60;
+$samesite = 'none';
+$secure = true;
+$httponly = true;
+if(PHP_VERSION_ID < 70300) {
+    session_set_cookie_params($maxlifetime, '/; samesite='.$samesite, $_SERVER['HTTP_HOST'], $secure, $httponly);
+} else {
+    session_set_cookie_params([
+        'lifetime' => $maxlifetime,
+        'path' => '/',
+        'domain' => $_SERVER['HTTP_HOST'],
+        'secure' => $secure,
+        'httponly' => $httponly,
+        'samesite' => $samesite
+    ]);
+}
 session_start();
 if(!isset($_SESSION['pass'])) die();
 
