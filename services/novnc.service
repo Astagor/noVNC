@@ -3,7 +3,7 @@ Description=novnc
 After=network.target
 
 [Service]
-ExecStart=/var/www/noVNC/utils/novnc_proxy --listen 6181 --vnc 127.0.0.1:5901
+ExecStart=/var/www/noVNC/utils/novnc_proxy --listen 6181 --vnc 127.0.0.1:5900
 Restart=always
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 User=www-data

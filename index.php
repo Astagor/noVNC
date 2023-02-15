@@ -235,8 +235,7 @@ $_SESSION['pass'] = $_GET['token'];
 */
         // Read parameters specified in the URL query string
         // By default, use the host and port of server that served this file
-        // const host = readQueryVariable('host', window.location.hostname);
-        const host = readQueryVariable('host', '127.0.0.1');
+        const host = readQueryVariable('host', window.location.hostname);
         let port = readQueryVariable('port', window.location.port);
         //const password = readQueryVariable('password');
         const path = readQueryVariable('path', 'websockify_novnc_medvc');

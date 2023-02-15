@@ -3,15 +3,17 @@ ADD TO DEFAULT TERMIANL CONFIG!!!!
 
 listen 80 default_server;
 
-          allow 127.0.0.1;
-          allow 62.214.158.110;
-          allow EIZO-IP
-          deny all;
+        # allow 127.0.0.1;
+        # allow 62.214.158.110;
+        # allow EIZO-IP
+        # deny all;
 
 
 location /websockify_novnc_medvc {
-          allow 127.0.0.1;
-          deny all;
+        # allow 127.0.0.1;
+        # allow 62.214.158.110;
+        # allow EIZO-IP
+        # deny all;
           proxy_pass http://127.0.0.1:6181;
           proxy_http_version 1.1;
           proxy_set_header Upgrade $http_upgrade;
