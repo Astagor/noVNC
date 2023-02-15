@@ -108,7 +108,8 @@ $_SESSION['pass'] = $_GET['token'];
         function credentialsAreRequired(e) {
             //const password = prompt("Password Required:");
             
-            rfb.sendCredentials({ password: '<?php echo($_SESSION["pass"]); ?>' });
+            //rfb.sendCredentials({ password: '<?php echo($_SESSION["pass"]); ?>' });
+            rfb.sendCredentials({ password: 'EizO631' });
             
             /*
             var xhttp = new XMLHttpRequest();
