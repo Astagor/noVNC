@@ -18,7 +18,7 @@ snap install --dangerous novnc_1.3.0+medVC_amd64.snap
 snap set novnc services.n6081.listen=6081 services.n6081.vnc=127.0.0.1:5922 services.n6081.cert=/etc/letsencrypt/live/novnc.conf.medvc.eu/cert.pem
 snap set novnc services.n6082.listen=6082 services.n6082.vnc=127.0.0.1:5923 services.n6082.cert=/etc/letsencrypt/live/novnc2.conf.medvc.eu/cert.pem
 snap set novnc services.n6083.listen=6083 services.n6083.vnc=127.0.0.1:5924 services.n6083.cert=/etc/letsencrypt/live/novnc3.conf.medvc.eu/cert.pem
-snap set novnc services.n6084.listen=6084 services.n6084.vnc=127.0.0.1:5925 services.n6084.cert=/etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/cert.pem
+snap set novnc services.n6084.listen=6084 services.n6084.vnc=127.0.0.1:5925 services.n6084.cert=/etc/letsencrypt/live/novnc.speakers.tnc22.geant.org/cert.pem
 
 
 
@@ -54,15 +54,15 @@ ssh –f  -R5924:127.0.0.1:5900 sshtunnel@novnc3.conf.medvc.eu
 
 
 polaczenie TNC
-snap set novnc services.n6084.listen=6084 services.n6084.vnc=127.0.0.1:5925 services.n6084.cert=/etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/cert.pem
+snap set novnc services.n6084.listen=6084 services.n6084.vnc=127.0.0.1:5925 services.n6084.cert=/etc/letsencrypt/live/novnc.speakers.tnc22.geant.org/cert.pem
 
 screen -S NOVNCTNC
-/root/noVNC/utils/novnc_proxy --listen 6084 --vnc 127.0.0.1:5925 --cert /etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/cert.pem
+/root/noVNC/utils/novnc_proxy --listen 6084 --vnc 127.0.0.1:5925 --cert /etc/letsencrypt/live/novnc.speakers.tnc22.geant.org/cert.pem
 ctrl a + crtl d
 
 snap set novnc services.n6084.listen='' services.n6084.vnc='' services.n6084.cert=''
 
-ssh –f  -R5925:127.0.0.1:5900 sshtunnel@novnc.speakers.tnc21.geant.org
+ssh –f  -R5925:127.0.0.1:5900 sshtunnel@novnc.speakers.tnc22.geant.org
 
 
 

@@ -16,11 +16,11 @@ if(PHP_VERSION_ID < 70300) {
     ]);
 }
 session_start();
-$allowed_host = 'speakers.tnc21.geant.org';
-$host = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
-if(substr($host, 0 - strlen($allowed_host)) !== $allowed_host) {
-    die();
-}
+//$allowed_host = 'speakers.tnc22.geant.org';
+//$host = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+//if(substr($host, 0 - strlen($allowed_host)) !== $allowed_host) {
+//    die();
+//}
 
 $isSafari = false;
 if (stripos( $_SERVER['HTTP_USER_AGENT'], 'Chrome') === false && stripos($_SERVER['HTTP_USER_AGENT'], 'Safari') !== false)
