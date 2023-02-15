@@ -192,11 +192,11 @@ $_SESSION['pass'] = $_GET['token'];
           let elem = parent.document.getElementById('novnc_iframe');
 		  if (elem.requestFullscreen) {
 			elem.requestFullscreen();
-		  } else if (elem.mozRequestFullScreen) { /* Firefox */
+		  } else if (elem.mozRequestFullScreen) { 
 			elem.mozRequestFullScreen();
-		  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+		  } else if (elem.webkitRequestFullscreen) { 
 			elem.webkitRequestFullscreen();
-		  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+		  } else if (elem.msRequestFullscreen) { 
 			elem.msRequestFullscreen();
 		  }
         }
@@ -204,11 +204,11 @@ $_SESSION['pass'] = $_GET['token'];
         function closeFullscreen() {
 		  if (parent.document.exitFullscreen) {
 		    parent.document.exitFullscreen();
-		  } else if (parent.document.mozCancelFullScreen) { /* Firefox */
+		  } else if (parent.document.mozCancelFullScreen) { 
 		    parent.document.mozCancelFullScreen();
-		  } else if (parent.document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+		  } else if (parent.document.webkitExitFullscreen) { 
 		    parent.document.webkitExitFullscreen();
-		  } else if (parent.document.msExitFullscreen) { /* IE/Edge */
+		  } else if (parent.document.msExitFullscreen) { 
 		    parent.document.msExitFullscreen();
 		  }
 		}
