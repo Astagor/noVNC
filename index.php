@@ -187,6 +187,7 @@ $_SESSION['pass'] = $_GET['token'];
             freezButtons();
         }
 
+/*
         function openFullscreen() {
           let elem = parent.document.getElementById('novnc_iframe');
 		  if (elem.requestFullscreen) {
@@ -231,7 +232,7 @@ $_SESSION['pass'] = $_GET['token'];
 
         document.getElementById('full_screen_button')
             .onclick = openFullscreen;
-
+*/
         // Read parameters specified in the URL query string
         // By default, use the host and port of server that served this file
         // const host = readQueryVariable('host', window.location.hostname);
