@@ -9,7 +9,7 @@ if(PHP_VERSION_ID < 70300) {
     session_set_cookie_params([
         'lifetime' => $maxlifetime,
         'path' => '/',
-        'domain' => $_SERVER['HTTP_HOST'],
+        'domain' => '127.0.0.1',
         'secure' => $secure,
         'httponly' => $httponly,
         'samesite' => $samesite
@@ -78,8 +78,8 @@ $_SESSION['pass'] = $_GET['token'];
     <!-- actual script modules -->
     <script type="module" crossorigin="anonymous">
 
-		var hostArray = window.location.hostname.split('.');
-		document.domain = hostArray[hostArray.length - 2] + '.' + hostArray[hostArray.length - 1];
+		// var hostArray = window.location.hostname.split('.');
+		// document.domain = hostArray[hostArray.length - 2] + '.' + hostArray[hostArray.length - 1];
 
         // RFB holds the API to connect and communicate with a VNC server
         import RFB from './core/rfb.js';

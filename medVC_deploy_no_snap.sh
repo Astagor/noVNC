@@ -1,4 +1,5 @@
 #!/bin/bash
+chown -R www-data:www-data /var/www/noVNC
 cd /var/www/noVNC
 mkdir -p /var/www/html/medvc_remote
 cp index.php /var/www/html/medvc_remote/
