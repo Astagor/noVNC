@@ -91,7 +91,8 @@ $_SESSION['pass'] = $_GET['token'];
         // successfully connected to a server
         function connectedToServer(e) {
             // status("Connected to " + desktopName);
-            status("PRESENTATION CONTROL WINDOW");
+           status("Connected.");
+           document.getElementById('status').style.display = "none";
         }
 
         // This function is called when we are disconnected
@@ -284,9 +285,7 @@ $_SESSION['pass'] = $_GET['token'];
 <body>
     <div id="top_bar">
         <div id="status">Loading</div>
-        <div id="sendCtrlAltDelButton">Send CtrlAltDel</div>
     </div>
-	<span style="display: block; text-align: center;" ><button style="font-size: 100%; margin-right: 10px;" id="send_prev_button">Previous slide</button><button  style="font-size: 100%; margin-right: 10px;" id="send_next_button">Next slide</button><button style="font-size: 100%;" id="full_screen_button">Full screen</button></span>
     <div id="screen">
         <!-- This is where the remote screen will appear -->
     </div>
