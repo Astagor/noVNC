@@ -49,7 +49,7 @@ $_SESSION['pass'] = $_GET['token'];
         }
 
         #top_bar {
-            background-color: #6e84a3;
+            background-color: #169bbd;
             color: white;
             font: bold 12px Helvetica;
             padding: 6px 5px 4px 5px;
