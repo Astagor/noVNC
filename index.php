@@ -92,7 +92,7 @@ $_SESSION['pass'] = $_GET['token'];
         function connectedToServer(e) {
             // status("Connected to " + desktopName);
            status("Connected.");
-           document.getElementById('status').style.display = "none";
+           document.getElementById('top_bar').style.display = "none";
         }
 
         // This function is called when we are disconnected
