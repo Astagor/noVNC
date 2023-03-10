@@ -285,6 +285,7 @@ $_SESSION['pass'] = $_GET['token'];
 <body>
     <div id="top_bar">
         <div id="status">Loading</div>
+        <div id="sendCtrlAltDelButton">Send CtrlAltDel</div>
     </div>
     <div id="screen">
         <!-- This is where the remote screen will appear -->
