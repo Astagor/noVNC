@@ -22,9 +22,9 @@ session_start();
 //    die('');
 //}
 
-if(!isset($_SESSION['pass'])){
-    die('');
-}
+//if(!isset($_SESSION['pass'])){
+//    die('');
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">

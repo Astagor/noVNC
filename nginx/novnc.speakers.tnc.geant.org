@@ -1,7 +1,7 @@
 server {
         root /var/www/html/novnc;
 		index index.php index.html index.htm index.nginx-debian.html;
-        server_name novnc.speakers.tnc21.geant.org;
+        server_name novnc.speakers.tnc.geant.org;
 
         location / {
 			try_files $uri $uri/ =404;
@@ -37,19 +37,18 @@ location /websockify_novnc_medvc {
 
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/novnc.speakers.tnc21.geant.org/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/novnc.speakers.tnc.geant.org/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/novnc.speakers.tnc.geant.org/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
-}
-server {
-    if ($host = novnc.speakers.tnc21.geant.org) {
+}server {
+    if ($host = novnc.speakers.tnc.geant.org) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
-        server_name novnc.speakers.tnc21.geant.org;
+        server_name novnc.speakers.tnc.geant.org;
 
 
     listen 80;

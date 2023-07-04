@@ -25,7 +25,7 @@ if(isset($_REQUEST['font-weight'])) $fontweight = $_REQUEST['font-weight'];
 $fontsize = '500';
 if(isset($_REQUEST['font-size'])) $fontsize = $_REQUEST['font-size'];
 
-$backgroundcolor = 'transparent';
+$backgroundcolor = '000000';
 if(isset($_REQUEST['background-color'])) $backgroundcolor = $_REQUEST['background-color'];
 if($backgroundcolor !== 'transparent') $backgroundcolor = '#'.$backgroundcolor;
 
