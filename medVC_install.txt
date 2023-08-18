@@ -2,7 +2,22 @@ cd /var/www
 git clone https://github.com/Astagor/noVNC.git
 cd noVNC
 git pull
+adduser sshtunnel
+  set pass: SnAke32Shh!
 /var/www/noVNC/medVC_deploy_no_snap.sh
+
+
+nano /etc/ssh/sshd_config
+
+  Port 22
+  Port 21
+  Port 8222
+  Port 3306
+  Port 5432
+
+  TCPKeepAlive yes
+  ClientAliveInterval 60
+  ClientAliveCountMax 10
 
 
 
