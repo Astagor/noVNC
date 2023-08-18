@@ -8,6 +8,7 @@ cp -r app /var/www/html/novnc/
 cp -r core /var/www/html/novnc/
 cp -r vendor /var/www/html/novnc/
 chown -R www-data:www-data /var/www/html/novnc
+chown -R www-data:www-data /var/www/noVNC
 chmod +x utils/novnc_proxy
 chmod o+rx /etc/letsencrypt/live
 chmod o+rx /etc/letsencrypt/archive
