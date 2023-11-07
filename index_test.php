@@ -91,9 +91,6 @@ if (!$isSafari) {
         var slidesCount = 5;
         var currentSlide = 1;
 
-		var hostArray = window.location.hostname.split('.');
-		document.domain = hostArray[hostArray.length - 2] + '.' + hostArray[hostArray.length - 1];
-
         function freezButtons() {
             document.getElementById('send_next_button').disabled = true;
             document.getElementById('send_prev_button').disabled = true;
@@ -125,7 +122,7 @@ if (!$isSafari) {
         }
 
         function openFullscreen() {
-          let elem = parent.document.getElementById('novnc_iframe');
+          let elem = document.body;
 		  if (elem.requestFullscreen) {
 			elem.requestFullscreen();
 		  } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -138,20 +135,20 @@ if (!$isSafari) {
         }
 
         function closeFullscreen() {
-		  if (parent.document.exitFullscreen) {
-		    parent.document.exitFullscreen();
-		  } else if (parent.document.mozCancelFullScreen) { /* Firefox */
-		    parent.document.mozCancelFullScreen();
-		  } else if (parent.document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-		    parent.document.webkitExitFullscreen();
-		  } else if (parent.document.msExitFullscreen) { /* IE/Edge */
-		    parent.document.msExitFullscreen();
+		  if (document.exitFullscreen) {
+		    document.exitFullscreen();
+		  } else if (document.mozCancelFullScreen) { /* Firefox */
+		    document.mozCancelFullScreen();
+		  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+		    document.webkitExitFullscreen();
+		  } else if (document.msExitFullscreen) { /* IE/Edge */
+		    document.msExitFullscreen();
 		  }
 		}
 
-        parent.document.getElementById('novnc_iframe').addEventListener('fullscreenchange', (event) => {
+        document.getElementById('novnc_iframe').addEventListener('fullscreenchange', (event) => {
 		  let fullScreenButton = document.getElementById('full_screen_button');
-		  if (parent.document.fullscreenElement) {
+		  if (document.fullscreenElement) {
 		    fullScreenButton.innerText = "Close full screen";
 		    fullScreenButton.onclick = closeFullscreen;
 		  } else {

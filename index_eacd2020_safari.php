@@ -83,8 +83,6 @@ if(!isset($_SESSION['pass'])){
     <!-- actual script modules -->
     <script type="module" crossorigin="anonymous">
 
-		document.domain = "medvc.eu";
-
         // RFB holds the API to connect and communicate with a VNC server
         import RFB from './core/rfb_video.js';
 

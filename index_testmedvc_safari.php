@@ -80,9 +80,6 @@ if(!isset($_SESSION['pass'])){
         var slidesCount = 5;
         var currentSlide = 1;
 
-		var hostArray = window.location.hostname.split('.');
-		document.domain = hostArray[hostArray.length - 2] + '.' + hostArray[hostArray.length - 1];
-
         function freezButtons() {
             document.getElementById('send_next_button').disabled = true;
             document.getElementById('send_prev_button').disabled = true;

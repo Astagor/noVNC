@@ -88,8 +88,6 @@ if (!$isSafari) {
     <!-- actual script modules -->
     <script type="module" crossorigin="anonymous">
 
-		document.domain = "medvc.eu";
-
         // RFB holds the API to connect and communicate with a VNC server
         import RFB from './core/rfb_video.js';
 
@@ -185,7 +183,7 @@ if (!$isSafari) {
 		}
 
         function openFullscreen() {
-          let elem = parent.document.getElementById('novnc_iframe');
+          let elem = document.body;
 		  if (elem.requestFullscreen) {
 			elem.requestFullscreen();
 		  } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -198,20 +196,20 @@ if (!$isSafari) {
         }
 
         function closeFullscreen() {
-		  if (parent.document.exitFullscreen) {
-		    parent.document.exitFullscreen();
-		  } else if (parent.document.mozCancelFullScreen) { /* Firefox */
-		    parent.document.mozCancelFullScreen();
-		  } else if (parent.document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-		    parent.document.webkitExitFullscreen();
-		  } else if (parent.document.msExitFullscreen) { /* IE/Edge */
-		    parent.document.msExitFullscreen();
+		  if (document.exitFullscreen) {
+		    document.exitFullscreen();
+		  } else if (document.mozCancelFullScreen) { /* Firefox */
+		    document.mozCancelFullScreen();
+		  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+		    document.webkitExitFullscreen();
+		  } else if (document.msExitFullscreen) { /* IE/Edge */
+		    document.msExitFullscreen();
 		  }
 		}
 
-        parent.document.getElementById('novnc_iframe').addEventListener('fullscreenchange', (event) => {
+        document.getElementById('novnc_iframe').addEventListener('fullscreenchange', (event) => {
 		  let fullScreenButton = document.getElementById('full_screen_button');
-		  if (parent.document.fullscreenElement) {
+		  if (document.fullscreenElement) {
 		    fullScreenButton.innerText = "Zamknij pełen ekran";
 		    fullScreenButton.onclick = closeFullscreen;
 		  } else {
