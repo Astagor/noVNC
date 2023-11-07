@@ -207,7 +207,7 @@ if (!$isSafari) {
 		  }
 		}
 
-        document.getElementById('novnc_iframe').addEventListener('fullscreenchange', (event) => {
+        document.addEventListener('fullscreenchange', (event) => {
 		  let fullScreenButton = document.getElementById('full_screen_button');
 		  if (document.fullscreenElement) {
 		    fullScreenButton.innerText = "Zamknij pełen ekran";
